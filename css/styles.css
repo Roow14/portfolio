@@ -745,4 +745,27 @@ a {
     left: -10%;
     
   }
+  .projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Divide a lista em 3 colunas */
+    gap: 20px; /* Espaço entre os itens */
+    margin-top: 20px; /* Espaço entre o título e a lista */
+   
+   
+    
+  }
+  
+  .projetos a {
+    color: #e3d0b3;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #e3d0b3; /* Borda ao redor dos itens */
+    padding: 10px; /* Espaço interno entre o texto e a borda */
+    border-radius: 5px; /* Bordas arredondadas (opcional) */
+    width: 143px;
+    height: 40px;
+    
+   
+  }
 }
