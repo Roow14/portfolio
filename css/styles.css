@@ -394,7 +394,7 @@ a {
   border-left: 5px solid #e3d0b3;
   filter: opacity(55%);
   transition: 0.4s;
-  width: 150%;
+  width: 100%;
 }
 
 .sobre-mim__foto img:hover {
@@ -696,46 +696,87 @@ a {
     font-size: 0.8rem;
   }
 }
-.projeto h1 {
+.projeto {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.carousel {
   position: relative;
-  left: 10%;
-  color: #e3d0b3;
-  
-
-}
-/* Estilos para os links na seção de projetos */
-.projetos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Divide a lista em 3 colunas */
-  gap: 20px; /* Espaço entre os itens */
-  margin-top: 20px; /* Espaço entre o título e a lista */
- 
- 
-  
+  width: 80%;
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.projetos a {
-  color: #e3d0b3;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease, transform 0.3s ease;
-  border: 2px solid #e3d0b3; /* Borda ao redor dos itens */
-  padding: 10px; /* Espaço interno entre o texto e a borda */
-  border-radius: 5px; /* Bordas arredondadas (opcional) */
-  width: 143px;
-  height: 40px;
-  
- 
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
-
-
-/* Estilos para quando o mouse passar sobre os links */
-.projetos a:hover {
-  color: #e3d0b3;
-  transform: scale(1.05);
+.carousel-item {
+  flex: 0 0 33.33%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
 }
 
+.carousel-item img {
+  width: 85%;
+  height: auto;
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.carousel-item h2 {
+  margin: 10px 0;
+}
+
+.carousel-item p {
+  margin: 0;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+/* Estilos responsivos */
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .carousel-item {
+      flex: 0 0 50%; /* 2 itens por vez em tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+      flex: 0 0 100%; /* 1 item por vez em dispositivos móveis maiores */
+  }
+
+  .carousel-item img {
+      height: 300px; /* Ajusta a altura das imagens para 300px em dispositivos móveis */
+  }
+}
 @media only screen and (max-width: 768px){
   .sobre-mim__descricao p {
    
@@ -750,6 +791,7 @@ a {
     grid-template-columns: repeat(2, 1fr); /* Divide a lista em 3 colunas */
     gap: 20px; /* Espaço entre os itens */
     margin-top: 20px; /* Espaço entre o título e a lista */
+    width: 187%
    
    
     
