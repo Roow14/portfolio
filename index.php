@@ -154,18 +154,81 @@ Meu objetivo é contribuir para projetos desafiadores e inovadores, onde eu poss
         </div>
       </section>
       <div class="projeto">
-      <h1>Projetos</h1> </div>
-      <section class="projetos" id="projetos" data-anime="js-scroll">
-         
-            <a href="https://nivaldopisos.com.br/">Nivaldo Pisos  </a>
-            <a href="https://ktadv.com.br/">Advogada <br>Kalanit Tiecher  </a>
-            <a href="https://cachacawiba.com.br/wiba/">Cachaca Wiba  </a>
-            <a href="https://mrrefrigera.com.br/">MR Refrigera </a>
-            <a href="http://agenciapigeon.com.br/">Agencia Pigeon </a>
-            <a href="https://stcad.com.br/">Stcad  </a>
-            <a href="https://inovetecnologiams.com.br/">Inove Tecnologia MS</a>
-            <a href="https://ilustrasales.com.br/">Ilustra Sales</a>
-      </section>
+    <h1>Projetos</h1>
+</div>
+<section class="projetos" id="projetos">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <!-- Itens duplicados para efeito infinito -->
+            <div class="carousel-item">
+                <img src="images/nivaldo-pisos.jpg" alt="Nivaldo Pisos">
+                <h2><a href="https://nivaldopisos.com.br/">Nivaldo Pisos</a></h2>
+                
+            </div>
+            <div class="carousel-item">
+                <img src="images/kalaniit.jpg" alt="Advogada Kalanit Tiecher">
+                <h2><a href="https://ktadv.com.br/"> Kalanit Tiecher</a></h2>
+               
+            </div>
+            <div class="carousel-item">
+                <img src="images/wiba.jpg" alt="Cachaca Wiba">
+                <h2><a href="https://cachacawiba.com.br/wiba/">Cachaca Wiba</a></h2>
+                
+            </div>
+            <div class="carousel-item">
+                <img src="images/mrrefrigera.jpg" alt="MR Refrigera">
+                <h2><a href="https://mrrefrigera.com.br/">MR Refrigera</a></h2>
+                
+            </div>
+            <div class="carousel-item">
+                <img src="images/pigeon.jpg" alt="Agencia Pigeon">
+                <h2><a href="http://agenciapigeon.com.br/">Agencia Pigeon</a></h2>
+                
+            </div>
+            <div class="carousel-item">
+                <img src="images/stcard.jpg" alt="Stcad">
+                <h2><a href="https://stcad.com.br/">Stcad</a></h2>
+                
+            </div>
+            <div class="carousel-item">
+                <img src="images/inova.jpg" alt="Inove Tecnologia MS">
+                <h2><a href="https://inovetecnologiams.com.br/">Inove Tecnologia MS</a></h2>
+                
+            </div>
+            <div class="carousel-item">
+                <img src="images/ilusales.jpg" alt="Ilustra Sales">
+                <h2><a href="https://ilustrasales.com.br/">Ilustra Sales</a></h2>
+                
+            </div>
+            <div class="carousel-item">
+                <img src="images/sindsommelier.JPG" alt="Sindsommelier">
+                <h2><a href="https://sindsommelier.com.br/">Sindsommelier</a></h2>
+                
+            </div>
+
+            <!-- Itens duplicados -->
+            <div class="carousel-item">
+                <img src="images/nivaldo-pisos.jpg" alt="Nivaldo Pisos">
+                <h2><a href="https://nivaldopisos.com.br/">Nivaldo Pisos</a></h2>
+                <p>Descrição breve do projeto Nivaldo Pisos.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="images/advogada-kalanit-tiecher.jpg" alt="Advogada Kalanit Tiecher">
+                <h2><a href="https://ktadv.com.br/">Advogada Kalanit Tiecher</a></h2>
+                <p>Descrição breve do projeto Advogada Kalanit Tiecher.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="images/cachaca-wiba.jpg" alt="Cachaca Wiba">
+                <h2><a href="https://cachacawiba.com.br/wiba/">Cachaca Wiba</a></h2>
+                <p>Descrição breve do projeto Cachaca Wiba.</p>
+            </div>
+            <!-- Adicione o restante dos itens duplicados conforme necessário -->
+        </div>
+        <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</section>
+    <script src="script.js"></script>
             
              
           
