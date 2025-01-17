@@ -133,8 +133,8 @@ nav p a:hover {
 
 .principal,
 .sobre-mim,
-.experiencia,
-.projetos {
+.experiencia
+ {
   padding: 6.5% 15%;
   min-height: 35vh;
 }
@@ -212,8 +212,7 @@ a {
   text-transform: uppercase;
   color: #e3d0b3;
   font-weight: 600;
-  letter-spacing: 3px;
-  width: 500px;
+  
  
 
  
@@ -355,9 +354,12 @@ a {
 .sobre-mim__descricao-buttons-curriculo img,
 .sobre-mim__descricao-buttons-email p,
 .sobre-mim__descricao-buttons-email img,
-.projetos__card-button p,
-.projetos__card-button img {
+.projetos__card-button p {
   padding: 9px 0 5px;
+}
+
+.sobre-mim__descricao-buttons p{
+  padding: 15px;
 }
 
 .principal__botao-linkedin img,
@@ -579,8 +581,7 @@ a {
 
   .principal,
   .sobre-mim,
-  .experiencia,
-  .projetos {
+  .experiencia {
     padding: 6.5%;
   }
 }
@@ -696,78 +697,102 @@ a {
     font-size: 0.8rem;
   }
 }
-.projeto {
+
+.habilidades h1 {
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 20px; /* Ajuste a margem conforme necessário */
+  color: #e3d0b3;
+}
+.habilidades {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  left: 10%;
+  background: none
 }
 
 .carousel {
-  position: relative;
-  width: 80%;
-  max-width: 960px;
-  margin: auto;
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  border-radius: 10px;
+  position: relative;
+  width: 67%;
+    left: 20%;
 }
 
 .carousel-inner {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
+  width: calc(15% * 18); /* 15% para cada item multiplicado pelo número total de itens */
 }
 
 .carousel-item {
-  flex: 0 0 33.33%;
+  min-width: 15%; /* Reduz a largura de cada item */
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
 }
 
 .carousel-item img {
-  width: 85%;
-  height: auto;
-  max-width: 300px;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.carousel-item h2 {
-  margin: 10px 0;
-}
-
-.carousel-item p {
-  margin: 0;
+  width: 100%; /* Ajusta automaticamente à largura do item */
+  max-width: 80px; /* Define um limite máximo para a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Garante que a imagem seja ajustada dentro do contêiner sem corte */
+  margin: 0 auto; /* Centraliza a imagem dentro do item */
+  display: block;
 }
 
 .carousel-control {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 24px;
-  border-radius: 50%;
-  z-index: 1000;
+  z-index: 1;
 }
 
-.prev {
+.carousel-control.prev {
   left: 10px;
 }
 
-.next {
+.carousel-control.next {
   right: 10px;
 }
+
+
+
+
 /* Estilos responsivos */
 /* Estilos responsivos */
 @media (max-width: 768px) {
+  
+  .projetos {
+    width: 90%; /* Ajusta a largura do contêiner para a tela completa */
+    left: 10%; /* Remove a posição à esquerda */
+  }
+
   .carousel-item {
-      flex: 0 0 50%; /* 2 itens por vez em tablets */
+    min-width: 30%
+  }
+
+  .carousel-inner {
+    width: 100%; /* Ajusta a largura total dos itens para a largura do contêiner */
+  }
+
+  .carousel-item img {
+    width: 100px; /* Ajusta a largura da imagem para preencher o item */
+    height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção */
+  }
+
+  .carousel-control {
+    font-size: 18px; /* Reduz o tamanho dos controles para dispositivos móveis */
+    padding: 8px; /* Reduz o padding dos controles */
   }
 }
-
 @media (max-width: 480px) {
   .carousel-item {
       flex: 0 0 100%; /* 1 item por vez em dispositivos móveis maiores */
@@ -777,37 +802,56 @@ a {
       height: 300px; /* Ajusta a altura das imagens para 300px em dispositivos móveis */
   }
 }
-@media only screen and (max-width: 768px){
-  .sobre-mim__descricao p {
-   
-    width: 300px;
-    text-align:start;
-    position: relative;
-    left: -10%;
-    
-  }
-  .projetos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Divide a lista em 3 colunas */
-    gap: 20px; /* Espaço entre os itens */
-    margin-top: 20px; /* Espaço entre o título e a lista */
-    width: 187%
-   
-   
-    
-  }
-  
-  .projetos a {
-    color: #e3d0b3;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    border: 2px solid #e3d0b3; /* Borda ao redor dos itens */
-    padding: 10px; /* Espaço interno entre o texto e a borda */
-    border-radius: 5px; /* Bordas arredondadas (opcional) */
-    width: 143px;
-    height: 40px;
-    
-   
-  }
+/* Esconde o submenu inicialmente */
+.submenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+/* Estilo do submenu quando o mouse passa sobre "Portfolio" */
+.portfolio:hover .submenu {
+  display: block;
+  position: absolute;
+  background-color: #e3d0b3;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Estiliza os itens do submenu */
+.submenu li {
+  margin: 5px 0;
+}
+
+.submenu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.submenu a:hover {
+  color: #007bff;
+}
+
+/* Posiciona o submenu abaixo do item "Portfolio" */
+.portfolio {
+  position: relative;
+}
+
+/* Estilos gerais */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color:#e3d0b3;
+}
+
