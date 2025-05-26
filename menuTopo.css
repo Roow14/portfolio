@@ -1,0 +1,37 @@
+.menu-topo {
+  position: fixed;
+  top: 20px; /* afasta um pouco do topo */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  padding: 10px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  min-width: 300px;
+  border: 2px solid #4fc3f7;
+}
+
+.menu-topo ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-topo ul li a {
+  color: #4fc3f7;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.menu-topo ul li a:hover {
+  color: #81d4fa;
+  text-decoration: underline;
+}

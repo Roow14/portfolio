@@ -1,0 +1,70 @@
+.sobre-container {
+  display: flex;
+  gap: 60px;          /* espaçamento maior entre lista e detalhes */
+  height: 81vh;       /* quase toda a altura da tela */
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; 
+   
+ 
+}
+
+.lista-projetos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+}
+
+.lista-projetos li {
+  padding: 12px 15px;
+ 
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 206px ;
+}
+
+.lista-projetos li.ativo,
+.lista-projetos li:hover {
+  background-color:#4fc3f7;
+  color: white;
+}
+
+.detalhes-projeto {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+      position: relative;
+    left: 10px;
+    background-color: #555;
+}
+
+.detalhes-projeto h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #4fc3f7;
+}
+
+.detalhes-projeto p {
+  flex: 1 1 45%;       /* ocupa o restante do espaço disponível */
+  font-size: 1.1em;
+  line-height: 1.4;
+  margin: 0;
+  min-width: 250px;    /* evita ficar muito estreito */
+}
+
+.imagem-container {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imagem-container img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}

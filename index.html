@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meu Portfólio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css" />
+  <link rel="stylesheet" href="menuTopo.css" />
+  <link rel="stylesheet" href="sobre.css" />
+  <link rel="stylesheet" href="experiencia.css" />
+  <link rel="stylesheet" href="projetos.css" />
+  <link rel="stylesheet" href="contato.css" />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <div id="menuTopo"></div>
+
+  <div id="container-principal">
+    <div id="menu"></div>
+    <div id="conteudo"></div>
+  </div>
+
+  <script>
+    function incluirArquivo(arquivo, idElemento) {
+      return fetch(arquivo)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById(idElemento).innerHTML = html;
+        })
+        .catch(err => console.error('Erro ao carregar', arquivo, err));
+    }
+
+    function carregarExperienciaScript() {
+      return fetch('experienciaScript.js')
+        .then(res => res.text())
+        .then(js => {
+          eval(js);
+          inicializarExperiencia();
+        })
+        .catch(err => console.error('Erro ao carregar script experiência', err));
+    }
+
+    function carregarProjetosScript() {
+      return fetch('projetos.js')
+        .then(res => res.text())
+        .then(js => {
+          eval(js);
+          inicializarProjetos();
+        })
+        .catch(err => console.error('Erro ao carregar script projetos', err));
+    }
+
+    // Inicialização inicial do site
+    async function init() {
+      await incluirArquivo('menuTopo.html', 'menuTopo');
+      await incluirArquivo('menu.html', 'menu');
+      await incluirArquivo('sobre.html', 'conteudo');
+    }
+    init();
+
+    // Função para trocar o conteúdo principal
+    function carregarPagina(pagina) {
+      fetch(pagina)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('conteudo').innerHTML = html;
+
+          if (pagina === 'experiencia.html') {
+            carregarExperienciaScript();
+          } else if (pagina === 'projetos.html') {
+            carregarProjetosScript();
+          }
+        })
+        .catch(err => console.error('Erro ao carregar página', pagina, err));
+    }
+
+    // Exemplo: carregar projetos.html no carregamento (só pra testar)
+    // carregarPagina('projetos.html');
+  </script>
+
+</body>
+</html>
