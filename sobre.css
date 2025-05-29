@@ -69,8 +69,9 @@
 @media (max-width: 768px){
  .sobre {
   position: relative;
-  top: 500px;
-          height: 858px;
+  top: 0px;
+          height: 1662px;
+          
  }
  .btn-download {
   width: 100px;

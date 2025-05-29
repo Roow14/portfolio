@@ -71,6 +71,58 @@
 @media (max-width: 768px){
  .sobre-container {
   
-          height: 1000px;
+          height: 880px;
  }
+ .lista-projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lista-projetos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dois por linha */
+  gap: 10px;
+  max-width: 440px;
+  width: 100%;
+}
+
+.lista-projetos li {
+  padding: 12px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: #2c2c2c;
+  color: #ccc;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lista-projetos li.ativo,
+.lista-projetos li:hover {
+  background-color: #4fc3f7;
+  color: white;
+}
+
+.detalhes-projeto {
+  width: 95%;
+  max-width: 440px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #555;
+  color: #fff;
+  margin-top: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 300px;
+}
+
+
+
+
 }

@@ -1,4 +1,4 @@
-.sobre {
+.sobre-contato {
   max-width: 1000px;
   margin: 20px auto;
   color: #eee;
@@ -7,47 +7,49 @@
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(79, 195, 247, 0.6);
+   position: relative;
+  top: -820px;
 }
 
-.sobre h1 {
+.sobre-contato h1 {
   font-size: 2.2em;
   margin-bottom: 15px;
   border-bottom: 2px solid #4fc3f7;
   padding-bottom: 8px;
 }
 
-.sobre p {
+.sobre-contato p {
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.sobre ul {
+.sobre-contato ul {
   list-style: disc inside;
   padding-left: 0;
   font-size: 1.1em;
   color: #ccc;
 }
 
-.sobre ul li {
+.sobre-contato ul li {
   margin-bottom: 8px;
 }
 
-.sobre a {
+.sobre-contato a {
   color: #4fc3f7;
   text-decoration: none;
 }
 
-.sobre a:hover {
+.sobre-contato a:hover {
   text-decoration: underline;
 }
-.sobre i {
+.sobre-contato i {
   margin-right: 8px;
   color: #4fc3f7;
 }
 @media (max-width: 768px){
- .sobre {
+ .sobre-contato {
   position: relative;
-  top: 100px;
+  top: 0px;
  }
 }

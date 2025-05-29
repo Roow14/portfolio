@@ -81,16 +81,68 @@
 }
 @media (max-width: 768px) {
   #menu {
-  width: 100%;
-  
+  width: 100%;  
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
 }
-@media (max-width: 768px){
+
  .sobre-container {
   position: relative;
   top: 100px;
  }
+ 
+.lista-empresas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.lista-empresas ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dois por linha */
+  gap: 10px;
+  max-width: 440px;
+  width: 100%;
+}
+
+.lista-empresas ul li {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: #ccc;
+  font-size: 1.1em;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.lista-empresas ul li:hover,
+.lista-empresas ul li.ativo {
+  background-color: #4fc3f7;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Detalhes da experiência */
+.detalhes-experiencia {
+  width: 93%;
+  max-width: 440px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #555;
+  color: #eee;
+  font-size: 1.1em;
+  margin-top: 20px;
+  box-sizing: border-box;
+   position: absolute;
+  top: 215px;
+}
+
 }
