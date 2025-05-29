@@ -101,7 +101,10 @@
     font-size: 14px;
   }
   .menu-lateral {
-  width: 1000%;
+ 
+          width: 100%;
+        position: relative;
+        left: -40px;
  
  
 }

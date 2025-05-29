@@ -39,7 +39,11 @@
  .menu-topo {
   position: relative;
   top: 500px;
-  left: 600px;
+  left: 377px;
+  width: 10px;
   
  }
+ .menu-topo ul {
+ font-size: 10px;
+}
 }
