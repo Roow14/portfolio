@@ -1,7 +1,7 @@
 .menu-topo {
   position: fixed;
   top: 20px; /* afasta um pouco do topo */
-  left: 50%;
+  left: 280%;
   transform: translateX(-50%);
   background-color: #222;
   padding: 10px 30px;
@@ -34,4 +34,12 @@
 .menu-topo ul li a:hover {
   color: #81d4fa;
   text-decoration: underline;
+}
+@media (max-width: 768px){
+ .menu-topo {
+  position: relative;
+  top: 500px;
+  left: 600px;
+  
+ }
 }

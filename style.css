@@ -9,9 +9,9 @@ body {
 }
 
 /* Container principal: menu lateral + conteúdo */
-#container-principal {
-  display: flex;
-  height: calc(100vh - 60px); /* altura total menos menu topo */
+#conteudo {
+
+  height: 1px;
 }
 
 /* Menu lateral */
@@ -21,19 +21,17 @@ body {
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
+  position: relative;
+    top: -100px;
+    left: 50px;
 }
 
 /* Conteúdo principal */
-#conteudo {
-  flex-grow: 1;
-  padding: 30px;
-  overflow-y: auto;
-  background-color: #2c2c2c;
-}
+
 
 /* Menu topo fixo */
 #menuTopo {
-  position: fixed;
+  
   top: 0;
   left: 50%;
   transform: translateX(-50%);

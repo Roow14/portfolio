@@ -45,3 +45,9 @@
   margin-right: 8px;
   color: #4fc3f7;
 }
+@media (max-width: 768px){
+ .sobre {
+  position: relative;
+  top: 100px;
+ }
+}
