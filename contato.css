@@ -50,6 +50,6 @@
 @media (max-width: 768px){
  .sobre-contato {
   position: relative;
-  top: 0px;
+  top: -50px;
  }
 }
