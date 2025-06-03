@@ -118,8 +118,7 @@ function inicializarProjetos() {
     </ul>
    
   `
-}
-,
+},
     {
   titulo: 'Projeto Full Stack com Angular 17 + ASP.NET Core',
   imagem: 'imagens/fullstack.jpg', // ajuste conforme necessário
@@ -135,7 +134,39 @@ function inicializarProjetos() {
     </ul>
     
   `
-}
+},
+{
+      titulo: 'IBDMAR',
+  imagem: 'imagens/fastfood.jpg',
+  descricao: `
+    <p>Desenvolvi um site corporativo totalmente do zero utilizando o CMS Drupal, atendendo à demanda de um cliente que precisava de um website escalável, seguro e com funcionalidades personalizadas para gerenciar conteúdo de forma eficiente."
+  </p>
+    <h3>Tecnologias Utilizadas:</h3>
+    <ul>
+    <li><strong>Plataforma Drupal:</strong> </li>
+      <li><strong>HTML5:</strong> Estrutura da página.</li>
+      <li><strong>CSS3:</strong> Estilização e layout.</li>
+      
+     
+    </ul>
+  `
+    },
+    {
+      titulo: 'Apptour',
+  imagem: 'imagens/fastfood.jpg',
+  descricao: `
+    <p>Desenvolvi uma landing page moderna e eficiente utilizando WordPress para atender às necessidades de um cliente que desejava capturar leads de maneira estratégica.
+     O objetivo era criar uma página focada em conversões, com design atrativo, carregamento rápido e otimização para dispositivos móveis."
+  </p>
+    <h3>Tecnologias Utilizadas:</h3>
+    <ul>
+    <li><strong>Plataforma Wordpress:</strong> </li>
+      
+      
+     
+    </ul>
+  `
+    }
   ];
 
   itens.forEach((item, index) => {

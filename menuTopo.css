@@ -1,6 +1,6 @@
 .menu-topo {
   position: fixed;
-  top: 20px; /* afasta um pouco do topo */
+  top: -10px; /* afasta um pouco do topo */
   left: 280%;
   transform: translateX(-50%);
   background-color: #222;
