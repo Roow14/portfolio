@@ -1,47 +1,190 @@
+/* =====================================================
+   MENU SUPERIOR
+===================================================== */
 .menu-topo {
   position: fixed;
-  top: -10px; /* afasta um pouco do topo */
-  left: 280%;
+
+  top: 10px;
+  left: 50%;
+
   transform: translateX(-50%);
-  background-color: #222;
+
+  width: auto;
+  min-width: 520px;
+  max-width: calc(100% - 40px);
+
   padding: 10px 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-  z-index: 1000;
+
   display: flex;
+  align-items: center;
   justify-content: center;
-  width: fit-content;
-  min-width: 300px;
+
+  background-color: #222;
+
   border: 2px solid #4fc3f7;
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.45),
+    0 0 10px rgba(79, 195, 247, 0.25);
+
+  z-index: 9999;
+
+  box-sizing: border-box;
 }
 
+
+/* =====================================================
+   LISTA DO MENU
+===================================================== */
+
 .menu-topo ul {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
   display: flex;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  gap: 40px;
+
   list-style: none;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.menu-topo ul li {
   margin: 0;
   padding: 0;
 }
 
 .menu-topo ul li a {
-  color: #4fc3f7;
-  font-weight: 600;
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
   text-decoration: none;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 .menu-topo ul li a:hover {
-  color: #81d4fa;
-  text-decoration: underline;
+  color: #4fc3f7;
+
+  text-decoration: none;
+
+  transform: translateY(-2px);
+
+  text-shadow: 0 0 8px rgba(79, 195, 247, 0.65);
 }
-@media (max-width: 768px){
- .menu-topo {
-  position: relative;
-  top: 500px;
-  left: 377px;
-  width: 10px;
-  
- }
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media screen and (max-width: 900px) {
+
+  .menu-topo {
+    min-width: 0;
+
+    width: calc(100% - 40px);
+
+    padding: 14px 20px;
+  }
+
+  .menu-topo ul {
+    gap: 25px;
+  }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+  .menu-topo {
+    position: fixed;
+
+    top: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 20px);
+    min-width: 0;
+    max-width: none;
+
+    padding: 12px 10px;
+
+    border-radius: 12px;
+  }
+
+  .menu-topo ul {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 5px;
+
+    width: 100%;
+  }
+
+  .menu-topo ul li {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .menu-topo ul li a {
+    width: 100%;
+
+    padding: 7px 3px;
+
+    font-size: 0.82rem;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media screen and (max-width: 430px) {
+
+  .menu-topo {
+    padding: 10px 6px;
+  }
+
+  .menu-topo ul {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 6px;
+  }
+
+  .menu-topo ul li a {
+    padding: 6px;
+
+    font-size: 0.82rem;
+  }
 
 }

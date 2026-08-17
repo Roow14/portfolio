@@ -1,56 +1,152 @@
+/* =====================================================
+   MENU LATERAL
+===================================================== */
+
 .menu-lateral {
-  background-color: #222;
-  color: #eee;
+  width: 100%;
+
   padding: 20px;
+
+  color: #eee;
+  background-color: #222;
+
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 10px rgba(79, 195, 247, 0.25),
+    0 10px 25px rgba(0, 0, 0, 0.25);
+
+  position: static;
+
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
-  
+}
+
+
+/* =====================================================
+   PERFIL
+===================================================== */
+
+.perfil {
+  width: 100%;
+
+  margin-bottom: 25px;
+
+  text-align: center;
 }
 
 .foto-perfil {
-  width: 80%;
-  border-radius: 10%;
-  margin-bottom: 15px;
+  display: block;
+
+  width: 100%;
+  max-width: 190px;
+  aspect-ratio: 1 / 1;
+
+  margin: 0 auto 15px;
+
+  object-fit: cover;
+
+  border: 3px solid #4fc3f7;
+  border-radius: 12px;
+
+  box-shadow: 0 0 12px rgba(79, 195, 247, 0.4);
 }
 
-.perfil {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.profissao {
-  font-style: italic;
-  color: #aaa;
+.perfil-info {
+  width: 100%;
 }
 
 .menu-lateral h2 {
-  width: 250px;
-  position: relative;
-  left: -30px;
+  width: auto;
+
+  margin: 0 0 7px;
+
+  color: #fff;
+
+  font-size: 1.4rem;
+  line-height: 1.25;
+
+  position: static;
 }
 
+.profissao {
+  margin: 0;
+
+  color: #aaa;
+
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+
+/* =====================================================
+   HABILIDADES
+===================================================== */
+
 .habilidades h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #444;
-  padding-bottom: 5px;
+  margin: 24px 0 12px;
+  padding-bottom: 7px;
+
   color: #4fc3f7;
+
+  font-size: 1.1rem;
+
+  border-bottom: 1px solid #444;
 }
 
 .habilidades ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
   list-style: none;
-  padding-left: 0;
 }
 
 .habilidades li {
-  margin-bottom: 6px;
+  margin: 0;
+  padding: 6px 10px;
+
+  color: #ddd;
+  background-color: #333;
+
+  border: 1px solid #444;
+  border-radius: 5px;
+
+  font-size: 0.88rem;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
+.habilidades li:hover {
+  color: #222;
+  background-color: #4fc3f7;
+
+  border-color: #4fc3f7;
+}
+
+
+/* =====================================================
+   NAVEGAÇÃO OPCIONAL
+===================================================== */
+
 .navegacao ul {
+  margin: 30px 0 0;
+  padding: 0;
+
   list-style: none;
-  padding-left: 0;
-  margin-top: 30px;
 }
 
 .navegacao li {
@@ -59,8 +155,10 @@
 
 .navegacao a {
   color: #4fc3f7;
+
+  font-weight: 700;
   text-decoration: none;
-  font-weight: bold;
+
   cursor: pointer;
 }
 
@@ -68,60 +166,99 @@
   text-decoration: underline;
 }
 
-/* ========== MEDIA QUERY PARA 768px ========== */
-@media (max-width: 768px) {
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+  .menu-lateral {
+    width: 100%;
+
+    padding: 18px;
+
+    position: static;
+  }
+
   .perfil {
     display: flex;
     align-items: center;
-    text-align: left;
+
     gap: 15px;
-    margin-bottom: 25px;
+
+    margin-bottom: 20px;
+
+    text-align: left;
   }
 
-  .perfil img {
+  .foto-perfil {
+    flex: 0 0 100px;
+
     width: 100px;
     height: 100px;
-    object-fit: cover;
-    margin-bottom: 0;
+
+    margin: 0;
+
+    border-radius: 10px;
   }
 
   .perfil-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex: 1;
   }
 
   .menu-lateral h2 {
-    position: static;
-    font-size: 18px;
     width: auto;
+
+    margin: 0 0 5px;
+
+    font-size: 1.15rem;
+
+    position: static;
   }
 
   .profissao {
-    font-size: 14px;
+    font-size: 0.88rem;
   }
-  .menu-lateral {
- 
-          width: 90%;
-        position: relative;
-        left: -40px;
- 
- 
-}
-.habilidades ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+
+  .habilidades h3 {
+    margin-top: 18px;
+  }
+
+  .habilidades ul {
+    gap: 7px;
+  }
+
+  .habilidades li {
+    padding: 5px 9px;
+
+    font-size: 0.82rem;
+  }
+
 }
 
-.habilidades li {
-  margin-bottom: 6px;
-  background-color: #333;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-}
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media screen and (max-width: 430px) {
+
+  .perfil {
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .foto-perfil {
+    flex-basis: 82px;
+
+    width: 82px;
+    height: 82px;
+  }
+
+  .menu-lateral h2 {
+    font-size: 1rem;
+  }
 
 }
